@@ -1,0 +1,152 @@
+[
+  {
+    "id": "824f9a0a.231428",
+    "type": "tab",
+    "label": "Flow 2",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "9e0bb5f5.adc0b8",
+    "type": "mqtt in",
+    "z": "824f9a0a.231428",
+    "name": "",
+    "topic": "esp/temp",
+    "qos": "2",
+    "datatype": "auto",
+    "broker": "da3a24ce.35ddb8",
+    "x": 280,
+    "y": 160,
+    "wires": [
+      [
+        "13798aeb.79d785"
+      ]
+    ]
+  },
+  {
+    "id": "d19ef187.1fa37",
+    "type": "mqtt out",
+    "z": "824f9a0a.231428",
+    "name": "",
+    "topic": "esp/led",
+    "qos": "",
+    "retain": "",
+    "broker": "da3a24ce.35ddb8",
+    "x": 620,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "13798aeb.79d785",
+    "type": "ui_chart",
+    "z": "824f9a0a.231428",
+    "name": "",
+    "group": "d7b8037b.6f176",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "label": "chart",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 1,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "useOldStyle": false,
+    "outputs": 1,
+    "x": 670,
+    "y": 160,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "22045367.06fffc",
+    "type": "ui_button",
+    "z": "824f9a0a.231428",
+    "name": "",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "button",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "",
+    "x": 250,
+    "y": 300,
+    "wires": [
+      [
+        "d19ef187.1fa37"
+      ]
+    ]
+  },
+  {
+    "id": "da3a24ce.35ddb8",
+    "type": "mqtt-broker",
+    "z": "",
+    "name": "cloudMQTT",
+    "broker": "mqtt://165.22.21.64/",
+    "port": "26307",
+    "clientid": "",
+    "usetls": false,
+    "compatmode": false,
+    "keepalive": "60",
+    "cleansession": true,
+    "birthTopic": "cloudmqtt-router/status",
+    "birthQos": "2",
+    "birthRetain": "false",
+    "birthPayload": "online",
+    "closeTopic": "cloudmqtt-router/status",
+    "closeQos": "2",
+    "closeRetain": "false",
+    "closePayload": "stopped",
+    "willTopic": "cloudmqtt-router/status",
+    "willQos": "2",
+    "willRetain": "false",
+    "willPayload": "stopped"
+  },
+  {
+    "id": "d7b8037b.6f176",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "d45d14b8.2b9428",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "d45d14b8.2b9428",
+    "type": "ui_tab",
+    "z": "",
+    "name": "Home",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  }
+]

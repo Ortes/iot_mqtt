@@ -29,4 +29,6 @@ The port 1880 must be open.
 ```shell script
 docker run -it -p 1880:1880 --name mynodered nodered/node-red
 ```
+Given ip_address the ip address of the server where NodeRed is installed.  
+To setup the flow open ip_address:1880 then clic on import and import copy and paste the json in nodered/flow-nodered.json
 
