@@ -1,4 +1,4 @@
-# IOT Project
+# IOT Project MQTT
 
 ## Install
 
@@ -10,6 +10,9 @@ git clone git@github.com:Ortes/iot_mqtt.git
 cd iot_mqtt
 idf.py flash && idf.py monitor
 ```
+MQTT topics are:
+- esp/temp topic where temperature is published as a string
+- esp/led topic where led state is published `'0'` is off `'1'` is on
 
 ### Server
 
@@ -20,7 +23,8 @@ The port 1883 must be open.
 sudo apt install mosquitto
 mosquitto
 ```
-#### NodeREed
+
+#### NodeRed
 The port 1880 must be open.
 ```shell script
 docker run -it -p 1880:1880 --name mynodered nodered/node-red
