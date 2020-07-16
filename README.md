@@ -12,6 +12,7 @@ idf.py flash && idf.py monitor
 ```
 MQTT topics are:
 - esp/temp topic where temperature is published as a string
+- esp/hum topic where temperature is published as a string
 - esp/led topic where led state is published `'0'` is off `'1'` is on
 
 ### Server
