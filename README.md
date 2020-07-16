@@ -8,6 +8,7 @@ After setting up the shell you can run the following:
 ```shell script
 git clone git@github.com:Ortes/iot_mqtt.git
 cd iot_mqtt
+idf.py menuconfig # configure broker address in Example Configuration -> Broker
 idf.py flash && idf.py monitor
 ```
 MQTT topics are:
